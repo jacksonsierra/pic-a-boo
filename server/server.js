@@ -1,4 +1,5 @@
 const http = require('http')
+    , requestHandler = require('./requestHandler')
     ;
 
 http.createServer(requestHandler.handleRequest).listen(5000);
