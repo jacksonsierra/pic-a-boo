@@ -1,0 +1,12 @@
+{
+  "name": "Pic-a-Boo",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A Snapchat clone done solely for educational purposes",
+  "repository": "https://github.com/jacksonsierra/pic-a-boo",
+  "license": "MIT",
+  "devDependencies": {
+    "bcrypt": "^0.8.5",
+    "mongodb": "^2.1.5"
+  }
+}
