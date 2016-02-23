@@ -2,6 +2,37 @@ const db = require('./db')
     , auth = require('./auth')
     ;
 
+function findUser(callback, user) {
+  var username = user.username
+    , password = user.password
+    ;
+
+  db.users.findOne({ username: username }, function(error, result) {
+    if(error) {
+      console.error('Error querying Users database: ', error.message);
+      callback(500, {contentType: 'text/plain', body: 'Error finding user\n'});
+      return;
+    }
+
+    if(result) {
+      if(password === undefined) {
+        callback(200, {contentType: 'application/json', body: JSON.stringify(true) + '\n'});
+        return;
+      }
+
+      var hash = result.hash;
+      auth.validateHash(
+          password
+        , hash
+        , callback
+      );
+      return;
+    }
+
+    callback(404, {contentType: 'text/plain', body: 'Invalid username or password\n'});
+  });
+}
+
 function insertUser(callback, user) {
   var username = user.username
     , password = user.password

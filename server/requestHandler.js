@@ -23,6 +23,15 @@ function handleRequest(request, response) {
       return;
     }
 
+    if(urlObj.pathname === '/login') {
+      utils.parseRequest(
+          request
+        , users.findUser.bind(null, utils.sendResponse.bind(null, response))
+        , utils.sendResponse.bind(null, response, 400)
+      );
+      return;
+    }
+
     utils.sendResponse(response, 404, {
         contentType: 'text/plain'
       , body: http.STATUS_CODES[404] + '\n'
