@@ -2,6 +2,18 @@ const db = require('./db')
     , auth = require('./auth')
     ;
 
+function getUsers(callback) {
+  db.users.find().toArray(function(error, result) {
+    if(error) {
+      console.error('Error querying Users database: ', error.message);
+      callback(500, {contentType: 'text/plain', body: 'Error retrieving users\n'});
+      return;
+    }
+
+    callback(200, {contentType: 'application/json', body: JSON.stringify(result) + '\n'});
+  });
+}
+
 function findUser(callback, user) {
   var username = user.username
     , password = user.password

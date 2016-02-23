@@ -10,7 +10,15 @@ function handleRequest(request, response) {
     ;
 
   if(method === 'GET') {
+    if(urlObj.pathname === '/users') {
+      if(urlObj.query.username === undefined) {
+        users.getUsers(utils.sendResponse.bind(null, response));
+        return;
+      }
 
+      users.findUser(utils.sendResponse.bind(null, response), urlObj.query);
+      return;
+    }
   }
 
   if(method === 'POST') {
