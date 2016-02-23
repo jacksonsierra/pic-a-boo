@@ -1,0 +1,9 @@
+logs/*
+!.gitkeep
+node_modules/
+tmp
+.DS_Store
+.idea
+Pic-a-Boo/**/*.DS_Store
+Pic-a-Boo/.DS_Store
+
