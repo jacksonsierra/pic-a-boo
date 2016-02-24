@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "OKAlertController.h"
+#import "LoadingView.h"
 
 @interface LoginViewController ()
 
@@ -32,8 +33,14 @@
     [self presentViewController:[OKAlertController alertControllerWithTitle:@"Invalid Username/Password" message:@"Please enter a username or password" preferredStyle:UIAlertControllerStyleAlert] animated:YES completion:nil];
   }
   
-  // Initialize loading screen in center of view while identity is verified
-  // All loading screen to view
+  // Initialize and add loading screen in center of view while identity is verified
+  CGFloat loadingViewFrameWidth = 150;
+  CGFloat loadingViewFrameHeight = 150;
+  CGRect loadingViewFrame = CGRectMake(CGRectGetMidX([self.view bounds]) - loadingViewFrameWidth/2, CGRectGetMidY([self.view bounds]) - loadingViewFrameHeight/2, loadingViewFrameWidth, loadingViewFrameHeight);
+  
+  loadingView = [LoadingView viewWithFrameAndTitle:loadingViewFrame title:@"Logging in..."];
+  [self.view addSubview:loadingView];
+  [self.view bringSubviewToFront:loadingView];
   
   // Initialize URLRequest object
   

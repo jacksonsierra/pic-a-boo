@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoadingView.h"
 
 @interface LoginViewController : UIViewController<NSURLConnectionDelegate> {
   NSMutableData *requestData;
+  LoadingView *loadingView;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
