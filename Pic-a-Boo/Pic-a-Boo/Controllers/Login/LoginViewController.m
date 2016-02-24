@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "OKAlertController.h"
 
 @interface LoginViewController ()
 
@@ -27,6 +28,9 @@
   NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   
   // Alert user if username/password is empty
+  if (username.length == 0 || password.length == 0) {
+    [self presentViewController:[OKAlertController alertControllerWithTitle:@"Invalid Username/Password" message:@"Please enter a username or password" preferredStyle:UIAlertControllerStyleAlert] animated:YES completion:nil];
+  }
   
   // Initialize loading screen in center of view while identity is verified
   // All loading screen to view
@@ -54,6 +58,7 @@
     
     if (statusCode != 200) {
       // Alert user of incorrect password
+      [self presentViewController:[OKAlertController alertControllerWithTitle:@"Invalid Username/Password" message:@"Please try again" preferredStyle:UIAlertControllerStyleAlert] animated:YES completion:nil];
       
       [connection cancel];
     }

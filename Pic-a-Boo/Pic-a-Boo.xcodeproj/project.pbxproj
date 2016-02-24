@@ -13,6 +13,7 @@
 		7A6CBD281C7D1E1300E2C8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6CBD271C7D1E1300E2C8B3 /* Assets.xcassets */; };
 		7A6CBD2B1C7D1E1300E2C8B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6CBD291C7D1E1300E2C8B3 /* LaunchScreen.storyboard */; };
 		7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */; };
+		7A6CBD3A1C7E30B300E2C8B3 /* OKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		7A6CBD2C1C7D1E1300E2C8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6CBD321C7D8BFC00E2C8B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/Login/LoginViewController.h; sourceTree = "<group>"; };
 		7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
+		7A6CBD381C7E30B300E2C8B3 /* OKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OKAlertController.h; path = "Pic-a-Boo/Controllers/Alert/OKAlertController.h"; sourceTree = "<group>"; };
+		7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OKAlertController.m; path = "Pic-a-Boo/Controllers/Alert/OKAlertController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,8 @@
 		7A6CBD0C1C7D1E1300E2C8B3 = {
 			isa = PBXGroup;
 			children = (
+				7A6CBD381C7E30B300E2C8B3 /* OKAlertController.h */,
+				7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */,
 				7A6CBD171C7D1E1300E2C8B3 /* Pic-a-Boo */,
 				7A6CBD161C7D1E1300E2C8B3 /* Products */,
 			);
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6CBD3A1C7E30B300E2C8B3 /* OKAlertController.m in Sources */,
 				7A6CBD1D1C7D1E1300E2C8B3 /* AppDelegate.m in Sources */,
 				7A6CBD1A1C7D1E1300E2C8B3 /* main.m in Sources */,
 				7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */,
