@@ -12,6 +12,7 @@
 		7A6CBD261C7D1E1300E2C8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6CBD241C7D1E1300E2C8B3 /* Main.storyboard */; };
 		7A6CBD281C7D1E1300E2C8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6CBD271C7D1E1300E2C8B3 /* Assets.xcassets */; };
 		7A6CBD2B1C7D1E1300E2C8B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6CBD291C7D1E1300E2C8B3 /* LaunchScreen.storyboard */; };
+		7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		7A6CBD271C7D1E1300E2C8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6CBD2A1C7D1E1300E2C8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A6CBD2C1C7D1E1300E2C8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A6CBD321C7D8BFC00E2C8B3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/Login/LoginViewController.h; sourceTree = "<group>"; };
+		7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 				7A6CBD1B1C7D1E1300E2C8B3 /* AppDelegate.h */,
 				7A6CBD1C1C7D1E1300E2C8B3 /* AppDelegate.m */,
 				7A6CBD241C7D1E1300E2C8B3 /* Main.storyboard */,
+				7A6CBD321C7D8BFC00E2C8B3 /* LoginViewController.h */,
+				7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */,
 				7A6CBD271C7D1E1300E2C8B3 /* Assets.xcassets */,
 				7A6CBD291C7D1E1300E2C8B3 /* LaunchScreen.storyboard */,
 				7A6CBD2C1C7D1E1300E2C8B3 /* Info.plist */,
@@ -146,6 +151,7 @@
 			files = (
 				7A6CBD1D1C7D1E1300E2C8B3 /* AppDelegate.m in Sources */,
 				7A6CBD1A1C7D1E1300E2C8B3 /* main.m in Sources */,
+				7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
