@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "OKAlertController.h"
 #import "LoadingView.h"
+#import "URLRequest.h"
 
 @interface LoginViewController ()
 
@@ -42,15 +43,16 @@
   [self.view addSubview:loadingView];
   [self.view bringSubviewToFront:loadingView];
   
-  // Initialize URLRequest object
+  // Initialize URLRequest body
+  NSDictionary *requestHeaders = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Content-Type", nil];
+  NSDictionary *requestBody = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", password, @"password", nil];
   
   // Initialize URLConnection
+  NSURLConnection *connection=[NSURLConnection connectionWithRequest:[URLRequest requestWithURLStringAndBody:@"http://127.0.0.1:5000/login" headers:requestHeaders body:requestBody] delegate:self];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 
@@ -64,6 +66,9 @@
     NSLog(@"Status Code: %zd", statusCode);
     
     if (statusCode != 200) {
+      // Stop spinny wheel
+      [loadingView stopAnimating];
+      
       // Alert user of incorrect password
       [self presentViewController:[OKAlertController alertControllerWithTitle:@"Invalid Username/Password" message:@"Please try again" preferredStyle:UIAlertControllerStyleAlert] animated:YES completion:nil];
       
@@ -88,7 +93,9 @@
   NSLog(@"%@", dataString);
   requestData = nil;
   
-  // Handle navigtaion
+  // Handle navigtaion after login attempt succeeds
+  [loadingView stopAnimating];
+  [self.navigationController popToRootViewControllerAnimated:YES];
 }
   
 @end

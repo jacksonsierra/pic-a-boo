@@ -15,6 +15,7 @@
 		7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD331C7D8BFC00E2C8B3 /* LoginViewController.m */; };
 		7A6CBD3A1C7E30B300E2C8B3 /* OKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */; };
 		7A6CBD3D1C7E348F00E2C8B3 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD3C1C7E348F00E2C8B3 /* LoadingView.m */; };
+		7A6CBD401C7E3C2200E2C8B3 /* URLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CBD3F1C7E3C2200E2C8B3 /* URLRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OKAlertController.m; path = "Pic-a-Boo/Controllers/Alert/OKAlertController.m"; sourceTree = "<group>"; };
 		7A6CBD3B1C7E348F00E2C8B3 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = "Pic-a-Boo/Views/Loading/LoadingView.h"; sourceTree = "<group>"; };
 		7A6CBD3C1C7E348F00E2C8B3 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = "Pic-a-Boo/Views/Loading/LoadingView.m"; sourceTree = "<group>"; };
+		7A6CBD3E1C7E3C2200E2C8B3 /* URLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLRequest.h; path = "Pic-a-Boo/Classes/URLRequest/URLRequest.h"; sourceTree = "<group>"; };
+		7A6CBD3F1C7E3C2200E2C8B3 /* URLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLRequest.m; path = "Pic-a-Boo/Classes/URLRequest/URLRequest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 			children = (
 				7A6CBD381C7E30B300E2C8B3 /* OKAlertController.h */,
 				7A6CBD391C7E30B300E2C8B3 /* OKAlertController.m */,
+				7A6CBD3E1C7E3C2200E2C8B3 /* URLRequest.h */,
+				7A6CBD3F1C7E3C2200E2C8B3 /* URLRequest.m */,
 				7A6CBD3B1C7E348F00E2C8B3 /* LoadingView.h */,
 				7A6CBD3C1C7E348F00E2C8B3 /* LoadingView.m */,
 				7A6CBD171C7D1E1300E2C8B3 /* Pic-a-Boo */,
@@ -164,6 +169,7 @@
 				7A6CBD1D1C7D1E1300E2C8B3 /* AppDelegate.m in Sources */,
 				7A6CBD1A1C7D1E1300E2C8B3 /* main.m in Sources */,
 				7A6CBD341C7D8BFC00E2C8B3 /* LoginViewController.m in Sources */,
+				7A6CBD401C7E3C2200E2C8B3 /* URLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
