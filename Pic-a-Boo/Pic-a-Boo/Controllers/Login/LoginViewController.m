@@ -44,11 +44,12 @@
   [self.view bringSubviewToFront:loadingView];
   
   // Initialize URLRequest body
-  NSDictionary *requestHeaders = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Content-Type", nil];
+  NSDictionary *requestHeaders = [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"Content-Type", @"POST", @"Method", nil];
   NSDictionary *requestBody = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", password, @"password", nil];
   
-  // Initialize URLConnection
-  NSURLConnection *connection=[NSURLConnection connectionWithRequest:[URLRequest requestWithURLStringAndBody:@"http://127.0.0.1:5000/login" headers:requestHeaders body:requestBody] delegate:self];
+  // Create URL Connection
+  NSMutableURLRequest *urlRequest = [URLRequest requestWithURLStringAndBody:@"http://127.0.0.1:5000/login" headers:requestHeaders body:requestBody];
+  NSURLConnection *connection=[NSURLConnection connectionWithRequest:urlRequest delegate:self];
 }
 
 #pragma mark - Navigation
@@ -86,6 +87,8 @@
   NSLog(@"Connection failed! Error - %@ %@",
         [error localizedDescription],
         [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+  [loadingView stopAnimating];
+  [self presentViewController:[OKAlertController alertControllerWithTitle:@"Login Failed" message:@"Could not connect to the server. Please try again." preferredStyle:UIAlertControllerStyleAlert] animated:YES completion:nil];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

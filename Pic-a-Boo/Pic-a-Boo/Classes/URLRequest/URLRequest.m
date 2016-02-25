@@ -11,9 +11,8 @@
 @implementation URLRequest
 
 - (instancetype) initWithURLStringAndBody:(NSString *)URLString headers:(NSDictionary *)headers body:(NSDictionary *)body {
-  self = [super init];
+  self = [super initWithURL:[NSURL URLWithString:URLString]];
   if (self) {
-    _url = [NSURL URLWithString:URLString];
     _headers = headers;
     _body = body;
     [self configureRequest];
@@ -33,7 +32,7 @@
     NSError *error;
     NSData *bodyJSON = [NSJSONSerialization dataWithJSONObject:self.body options:0 error:&error];
     
-    [self setValue:[self.headers objectForKey:@"Content-Type"] forKey:@"Content-Type"];
+    [self setValue:[self.headers objectForKey:@"Content-Type"] forHTTPHeaderField:@"Content-Type"];
     [self setHTTPBody:bodyJSON];
   }
 }

@@ -11,7 +11,8 @@ function validateHash(password, hash, callback) {
     }
 
     if(result) {
-      callback(200, {contentType: 'text/plain', body: 'User authenticated\n'});
+      // callback(200, {contentType: 'text/plain', body: 'User authenticated\n'});
+      setTimeout(callback, 3000, 200, {contentType: 'text/plain', body: 'User authenticated\n'});
       return;
     }
 

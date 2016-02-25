@@ -10,7 +10,6 @@
 
 @interface URLRequest : NSMutableURLRequest
 
-@property (weak, nonatomic) NSURL *url;
 @property (weak, nonatomic) NSDictionary *headers;
 @property (weak, nonatomic) NSDictionary *body;
 
